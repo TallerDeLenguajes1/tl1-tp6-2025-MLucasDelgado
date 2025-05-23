@@ -44,7 +44,7 @@ while (seguirCalculando)
 
 string ElegirOpciones()
 {
-    Console.WriteLine("----- CALCULADORA V2 -----");
+    Console.WriteLine("------ CALCULADORA V2 ------");
     Console.WriteLine("Seleccione una opción:");
     Console.WriteLine("1 - Operaciones básicas (sumar, restar, multiplicar, dividir)");
     Console.WriteLine("2 - Funciones sobre un número");
@@ -148,6 +148,5 @@ void CompararNumeros()
     Console.WriteLine($"Máximo: {Math.Max(num1, num2)}");
     Console.WriteLine($"Mínimo: {Math.Min(num1, num2)}");
 }
-
 
 
