@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+using System.Text.RegularExpressions;
+
 //Ejercicio 2 y 3 - Calculadora
 
 bool seguirCalculando = true;
@@ -272,4 +275,34 @@ Console.WriteLine("\nPartes separadas:");
 foreach (string parte in partes)
 {
     Console.WriteLine(parte);
+}
+
+// EJERCICIOS EXTRAS PUNTO 5
+
+Console.Write("Ingrese una dirección web: ");
+string url = Console.ReadLine();
+
+string patronUrl = @"^(https?:\/\/)?(www\.)?[a-zA-Z0-9\-]+(\.[a-z]{2,})(\/[^\s]*)?$";
+
+if (Regex.IsMatch(url, patronUrl))
+{
+    Console.WriteLine("✅ Es una dirección web válida.");
+}
+else
+{
+    Console.WriteLine("❌ No es una dirección web válida.");
+}
+
+Console.Write("Ingrese un correo electrónico: ");
+string email = Console.ReadLine();
+
+string patronEmail = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$";
+
+if (Regex.IsMatch(email, patronEmail))
+{
+    Console.WriteLine("✅ Es un correo electrónico válido.");
+}
+else
+{
+    Console.WriteLine("❌ Correo electrónico inválido.");
 }
